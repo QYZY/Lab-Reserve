@@ -1,0 +1,35 @@
+### All course
+
+GET localhost:8080/api/course
+
+### Teacher course
+GET localhost:8080/api/course/teacher/9
+
+### Add course
+POST localhost:8080/api/course/add
+Content-Type: application/json
+
+{
+  "name": "取证分析",
+  "stuNumber": 10,
+  "studyHour": 5,
+  "className": "计科2022-01",
+  "teacherName": "qyzy"
+}
+
+### Update course
+PUT localhost:8080/api/course/10
+Content-Type: application/json
+
+{
+  "name": "内网渗透",
+  "stuNumber": 10,
+  "studyHour": 5,
+  "className": "计科2022-01",
+  "teacherName": "qyzy"
+}
+
+### Delete course
+DELETE localhost:8080/api/course/11
+
+
