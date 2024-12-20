@@ -1,0 +1,35 @@
+### GET Labs
+GET localhost:8080/api/lab/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwNjc2MywiZXhwIjoxNzM0NzEwMzYzfQ.Uuzp_4JID6J2NDiCNMcQ3CUBL6ZKO0_2jm6kSKWvEs0
+
+### GET Available Lab
+GET localhost:8080/api/lab/available?weekNumber=1&weekDay=1&periodId=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMjA2NiwiZXhwIjoxNzM0NzM1NjY2fQ.jpbNLhhl3tQevJeOlKTi16ZejjdqkLhvrzZ-ndBUZDM
+
+
+### Add Lab
+POST localhost:8080/api/lab/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMjA2NiwiZXhwIjoxNzM0NzM1NjY2fQ.jpbNLhhl3tQevJeOlKTi16ZejjdqkLhvrzZ-ndBUZDM
+
+{
+  "name": "903",
+  "description": "ACM实验室",
+  "adminId": 1
+}
+
+### Update Lab
+PUT localhost:8080/api/lab/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+
+{
+  "name": "908",
+  "description": "实验室",
+  "adminId": 1
+}
+
+### Delete Lab
+DELETE localhost:8080/api/lab/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+

@@ -1,0 +1,29 @@
+###
+
+GET localhost:8080/api/reservation/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMzU4NywiZXhwIjoxNzM0NzM3MTg3fQ.wpofjPUjS7BuikQHm7FV6xn7GO2TRfglb72TtnhoQio
+
+###
+POST localhost:8080/api/reservation/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMzU4NywiZXhwIjoxNzM0NzM3MTg3fQ.wpofjPUjS7BuikQHm7FV6xn7GO2TRfglb72TtnhoQio
+
+ {
+    "userId": 1,
+    "courseId": 1,
+    "labId": 1,
+    "periodId": 3,
+    "weekNumber": 1,
+    "weekDay": 1
+  }
+
+
+###
+DELETE localhost:8080/api/reservation/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+
+###
+PATCH localhost:8080/api/reservation/1/approve
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+
+###

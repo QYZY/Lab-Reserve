@@ -1,14 +1,16 @@
 package com.edu.nefu.labreserve.util;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-
+@Component
 public class JwtUtil {
     private static final String SECRET_KEY = "Fn75jM0X8pOcJ75bUII3sy34pPG3q0iHQQ2pQQ5jJo22UJRLNfNOp1RVTsuPLVfO";
-    private static final Long EXPIRE_TIME = 86400000L;
+    private static final Long EXPIRE_TIME = 3600000L;
 
     public static String generateToken(String username) {
         return Jwts.builder()
@@ -19,20 +21,23 @@ public class JwtUtil {
                 .compact();
     }
 
-    public static String extractUsername(String token) {
-        Claims claims = Jwts.parser()
+    // 解析 JWT
+    public static Claims parseToken(String token) throws JwtException {
+        return Jwts.parserBuilder()
                 .setSigningKey(SECRET_KEY)
+                .build()
                 .parseClaimsJws(token)
                 .getBody();
-        return claims.getSubject();
     }
 
+    // 验证 JWT 是否过期
     public static boolean isTokenExpired(String token) {
-        Claims claims = Jwts.parser()
-                .setSigningKey(SECRET_KEY)
-                .parseClaimsJws(token)
-                .getBody();
-        return claims.getExpiration().before(new Date());
+        try {
+            Claims claims = parseToken(token);
+            return claims.getExpiration().before(new Date());
+        } catch (JwtException e) {
+            return true; // 无效 token
+        }
     }
 
 }

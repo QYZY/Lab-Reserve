@@ -1,10 +1,10 @@
 package com.edu.nefu.labreserve.service;
 
 import com.edu.nefu.labreserve.dox.User;
-import com.edu.nefu.labreserve.dto.CourseRequest;
-import com.edu.nefu.labreserve.dto.CourseResponse;
+import com.edu.nefu.labreserve.dto.CourseDTO;
 import com.edu.nefu.labreserve.repository.CourseRepository;
 import com.edu.nefu.labreserve.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +15,7 @@ import java.util.Optional;
 
 
 @SpringBootTest
+@Slf4j
 class CourseServiceTest {
     @Autowired
     private CourseService courseService;
@@ -25,53 +26,53 @@ class CourseServiceTest {
 
     @Test
     void testAddCourse() {
-        Optional<User> user = userRepository.findByUsername("admin");
-        CourseRequest courseRequest = CourseRequest.builder()
-                .name("数据结构")
-                .className("大数据2023-01")
+        Optional<User> user = userRepository.findByUsername("qyzy");
+        CourseDTO dto = CourseDTO.builder()
+                .name("计算机组成原理")
+                .className("软件工程 2021-01")
                 .stuNumber(20)
                 .studyHour(10)
-                .teacherName(user.get().getUsername())
+                .teacherId(user.get().getId())
                 .build();
-        courseService.addCourse(courseRequest);
+        courseService.addCourse(dto);
     }
 
     @Test
     void testUpdateCourse() {
-        Optional<User> user = userRepository.findByUsername("admin");
-        CourseRequest updatedCourseRequest = CourseRequest.builder()
+        Optional<User> user = userRepository.findByUsername("test");
+        CourseDTO dto = CourseDTO.builder()
                 .name("web前端")
                 .stuNumber(20)
                 .studyHour(15)
-                .className("人工智能1班")
-                .teacherName(user.get().getUsername())
+                .className("人工智能 2022-1")
+                .teacherId(user.get().getId())
                 .build();
 
-        courseService.updateCourse(4L, updatedCourseRequest);
+        courseService.updateCourse(5L, dto);
 
 
     }
 
     @Test
     void testDeleteCourse() {
-        Long courseId = courseRepository.findById(6L).get().getId();
+        Long courseId = courseRepository.findById(14L).get().getId();
         courseService.deleteCourse(courseId);
 
     }
 
     @Test
     void testGetAllCourses() {
-        List<CourseResponse> courses = courseService.getAllCourses();
-        for (CourseResponse course : courses) {
-            System.out.println(course);
+        List<CourseDTO> courses = courseService.getAllCourses();
+        for (CourseDTO course : courses) {
+            log.debug(course.toString());
         }
     }
 
     @Test
     void testGetCoursesByTeacher() {
-        List<CourseResponse> courses = courseService.getCoursesByTeacher(9L);
-        for (CourseResponse course : courses) {
-            System.out.println(course);
+        List<CourseDTO> courses = courseService.getCoursesByTeacher(1L);
+        for (CourseDTO course : courses) {
+            log.debug(course.toString());
         }
 
     }

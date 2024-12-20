@@ -18,24 +18,85 @@ class ReservationRepositoryTest {
     PeriodRepository periodRepository;
     @Autowired
     private LabRepository labRepository;
+    @Autowired
+    private CourseRepository courseRepository;
 
-//    @Test
-//    public void testAddReservation() {
-//        Optional<Period> period = periodRepository.findById(Long.valueOf(1));
-//        Optional<User> user = userRepository.findByUsername("miguo");
-//        Optional<Lab> lab = labRepository.findByName("903");
-//
-//
-//        Reservation reservation = Reservation.builder()
-//                .course(course.get())
-//                .period(period.get())
-//                .lab(lab.get())
-//                .weekNumber(1)
-//                .weekDay(1)
-//                .reservationDate(LocalDate.from(LocalDate.of(2024, 12, 15)))
-//                .status(ReservationStatus.PENDING)
-//                .build();
-//        reservationRepository.save(reservation);
-//
-//    }
+
+    @Test
+    public void testAddReservation() {
+        User user = userRepository.findById(2L).get();
+        Lab lab = labRepository.findById(1L).get();
+        Course course = courseRepository.findById(3L).get();
+        Period period = periodRepository.findById(1).get();
+
+        Reservation reservation = Reservation.builder()
+                .weekNumber(1)
+                .weekDay(1)
+                .status(ReservationStatus.PENDING)
+                .lab(lab)
+                .course(course)
+                .period(period)
+                .build();
+        reservationRepository.save(reservation);
+
+
+    }
+
+    @Test
+    public void testInitReservation() {
+        Reservation[] reservations = new Reservation[]{
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(1)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(1L).get())
+                        .period(periodRepository.findById(1).get())
+                        .build(),
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(1)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(2L).get())
+                        .period(periodRepository.findById(2).get())
+                        .build(),
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(1)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(2L).get())
+                        .period(periodRepository.findById(4).get())
+                        .build(),
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(2)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(2L).get())
+                        .period(periodRepository.findById(1).get())
+                        .build(),
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(2)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(3L).get())
+                        .period(periodRepository.findById(3).get())
+                        .build(),
+                Reservation.builder()
+                        .weekNumber(1)
+                        .weekDay(2)
+                        .status(ReservationStatus.PENDING)
+                        .lab(labRepository.findById(1L).get())
+                        .course(courseRepository.findById(2L).get())
+                        .period(periodRepository.findById(4).get())
+                        .build(),
+        };
+        for (Reservation reservation : reservations) {
+            reservationRepository.save(reservation);
+        }
+    }
+
 }

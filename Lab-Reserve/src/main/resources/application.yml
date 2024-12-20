@@ -3,7 +3,6 @@ spring:
     url: jdbc:mariadb://8.141.93.66:3306/lab?useSSL=false&serverTimezone=UTC
     username: root
     password: mima1234
-    driver-class-name: org.mariadb.jdbc.Driver
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
@@ -15,5 +14,8 @@ spring:
         format_sql: true  # 格式化 SQL
 logging:
   level:
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    com: debug
+    sql: debug
+    org: debug
+  pattern:
+    console: "%-3level %C.%M[%line] - %msg%n"

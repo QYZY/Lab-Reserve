@@ -2,6 +2,7 @@ package com.edu.nefu.labreserve.service;
 
 import com.edu.nefu.labreserve.dox.User;
 import com.edu.nefu.labreserve.dox.UserRole;
+import com.edu.nefu.labreserve.exception.XException;
 import com.edu.nefu.labreserve.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,11 +23,12 @@ public class UserService {
     public User addUser(String username, String password) {
         // 检测重复用户名
         if (userRepository.findByUsername(username).isPresent()) {
-            throw new IllegalArgumentException("Username already exists");
+            throw new XException("Username already exists");
         }
         // 添加用户
         User user = new User();
         user.setUsername(username);
+        // 密码加密存储
         user.setPassword(passwordEncoder.encode(password));
         user.setRole(UserRole.TEACHER);
 
@@ -35,7 +37,7 @@ public class UserService {
 
     public User addUser(String username, String password, UserRole role) {
         if (userRepository.findByUsername(username).isPresent()) {
-            throw new IllegalArgumentException("Username already exists");
+            throw new XException("Username already exists");
         }
         User user = new User();
         user.setUsername(username);
@@ -47,7 +49,7 @@ public class UserService {
     public void delUser(String username) {
         // 检查用户是否存在
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> new XException("User not found"));
 
         // 删除用户
         userRepository.delete(user);
@@ -60,7 +62,7 @@ public class UserService {
 
     // 根据用户名查询
     public User getUserByUsername(String username) {
-        return userRepository.findByUsername(username).orElseThrow(() -> new IllegalArgumentException("User not found"));
+        return userRepository.findByUsername(username).orElseThrow(() -> new XException("User not found"));
     }
 
     // 根据角色查询
@@ -72,7 +74,7 @@ public class UserService {
     public User resetPassword(String username, String newPassword) {
         // 查找用户
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> new XException("User not found"));
         // 加密新密码
         String encryptedPassword = passwordEncoder.encode(newPassword);
         // 更新用户密码
@@ -84,10 +86,10 @@ public class UserService {
     public User changePassword(String username, String oldPassword, String newPassword) {
         // 查找用户
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> new XException("User not found"));
         // 验证旧密码是否正确
         if (!passwordEncoder.matches(oldPassword, user.getPassword())) {
-            throw new IllegalArgumentException("Old password is incorrect");
+            throw new XException("Old password is incorrect");
         }
         // 加密新密码
         String encryptedPassword = passwordEncoder.encode(newPassword);
@@ -100,7 +102,7 @@ public class UserService {
     public User updateRole(String username, UserRole newRole) {
         // 查找用户
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> new XException("User not found"));
         // 更新角色
         user.setRole(newRole);
         return userRepository.save(user);

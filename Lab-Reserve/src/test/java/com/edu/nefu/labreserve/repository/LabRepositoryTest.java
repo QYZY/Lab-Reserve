@@ -20,7 +20,7 @@ class LabRepositoryTest {
 
         Lab lab = Lab.builder()
                 .name("910")
-                .adminId(user)
+                .admin(user)
                 .description("大数据实验室")
                 .build();
         labRepository.save(lab);
@@ -29,5 +29,34 @@ class LabRepositoryTest {
     @Test
     void testFindByName() {
 
+    }
+
+    @Test
+    void testInitLab() {
+        Lab[] labs = new Lab[] {
+                Lab.builder()
+                    .name("903")
+                    .admin(userRepository.findById(1L).get())
+                    .description("ACM实验室")
+                    .build(),
+                Lab.builder()
+                        .name("910")
+                        .admin(userRepository.findById(2L).get())
+                        .description("大数据实验室")
+                        .build(),
+                Lab.builder()
+                        .name("901")
+                        .admin(userRepository.findById(1L).get())
+                        .description("机房")
+                        .build(),
+                Lab.builder()
+                        .name("905")
+                        .admin(userRepository.findById(1L).get())
+                        .description("蓝桥杯机房")
+                        .build(),
+        };
+        for (Lab lab : labs) {
+            labRepository.save(lab);
+        }
     }
 }

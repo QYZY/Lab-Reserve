@@ -7,7 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+
 
 @SpringBootTest
 class UserRepositoryTest {
@@ -59,5 +62,31 @@ class UserRepositoryTest {
 
 //        Optional<User> user = userRepository.findByUsername("john_doe");
 //        assertFalse(user.isPresent());
+    }
+
+    @Test
+    public void testInitUser() {
+        User[] users = new User[]{
+                User.builder()
+                    .username("admin")
+                    .password("admin123")
+                    .role(UserRole.LAB_ADMIN)
+                    .build(),
+                User.builder()
+                    .username("test")
+                    .password("test123")
+                    .role(UserRole.TEACHER)
+                    .build(),
+                User.builder()
+                        .username("qyzy")
+                        .password("mima1234")
+                        .role(UserRole.SUPER_ADMIN)
+                        .build()
+        };
+
+        userRepository.saveAll(Arrays.asList(users));
+
+
+
     }
 }

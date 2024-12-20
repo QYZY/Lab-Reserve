@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Data
@@ -40,9 +38,6 @@ public class Reservation {
 
     @Column(nullable = false)
     private Integer weekDay; // 星期几（1-7，1是星期一）
-
-    @Column(nullable = false)
-    private LocalDate reserveDate; // 预约时间
 
     @ManyToOne
     @JoinColumn(name = "period_id", nullable = false)

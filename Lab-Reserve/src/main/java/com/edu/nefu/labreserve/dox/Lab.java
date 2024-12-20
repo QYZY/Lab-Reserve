@@ -24,5 +24,5 @@ public class Lab {
 
     @ManyToOne
     @JoinColumn(name = "admin_id", nullable = false)
-    private User adminId;
+    private User admin;
 }

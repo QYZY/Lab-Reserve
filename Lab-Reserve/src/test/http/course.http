@@ -1,0 +1,39 @@
+### All course
+
+GET localhost:8080/api/course/list
+
+### Teacher course
+GET localhost:8080/api/course/teacher/9
+
+### Add course
+POST localhost:8080/api/course/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwMjc1NSwiZXhwIjoxNzM0NzA2MzU1fQ.A4AlyqmbVc88VsB_Uk0ykwhqY3shbkzry9diQKYjESE
+
+{
+  "name": "取证分析",
+  "stuNumber": 10,
+  "studyHour": 5,
+  "className": "计算机科学与技术 2022-01",
+  "teacherId": 2
+}
+
+### Update course
+PUT localhost:8080/api/course/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwMjc1NSwiZXhwIjoxNzM0NzA2MzU1fQ.A4AlyqmbVc88VsB_Uk0ykwhqY3shbkzry9diQKYjESE
+
+{
+  "name": "内网渗透",
+  "stuNumber": 10,
+  "studyHour": 5,
+  "className": "计算机科学与技术 2022-01",
+  "teacherId": 3
+}
+
+### Delete course
+DELETE localhost:8080/api/course/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwMjc1NSwiZXhwIjoxNzM0NzA2MzU1fQ.A4AlyqmbVc88VsB_Uk0ykwhqY3shbkzry9diQKYjESE
+
+
+
