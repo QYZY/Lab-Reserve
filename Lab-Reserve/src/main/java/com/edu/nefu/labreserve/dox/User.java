@@ -23,6 +23,7 @@ public class User {
     private String username; // 用户名
 
     @Column(nullable = false)
+    @JsonIgnore
     private String password; // 密码
 
     @Enumerated(EnumType.STRING)

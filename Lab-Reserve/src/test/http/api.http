@@ -1,0 +1,2 @@
+GET http://127.0.0.1:8080/swagger-ui/index.html
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNTAwNDcwOCwiZXhwIjoxNzM1MDA4MzA4fQ.YzE7l_KSGZTYNdd3jZ0MPe4JwUCIui4KNeJWtD8UWRg
