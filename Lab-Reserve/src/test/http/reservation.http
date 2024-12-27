@@ -4,16 +4,22 @@ GET localhost:8080/api/reservation/list
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMzU4NywiZXhwIjoxNzM0NzM3MTg3fQ.wpofjPUjS7BuikQHm7FV6xn7GO2TRfglb72TtnhoQio
 
 ###
+
+GET localhost:8080/api/reservation/user/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNTMwMjk1MCwiZXhwIjoxNzM1MzA2NTUwfQ.7czGYFLDqvO_l7yWPavdA-Q5BFYp2osi1wI1nofi-68
+
+
+###
 POST localhost:8080/api/reservation/add
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczMzU4NywiZXhwIjoxNzM0NzM3MTg3fQ.wpofjPUjS7BuikQHm7FV6xn7GO2TRfglb72TtnhoQio
 
  {
     "userId": 1,
-    "courseId": 1,
+    "courseId": 12,
     "labId": 1,
     "periodId": 3,
-    "weekNumber": 1,
+    "weekNumber": 2,
     "weekDay": 1
   }
 

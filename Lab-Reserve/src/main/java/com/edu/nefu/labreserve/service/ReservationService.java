@@ -80,6 +80,14 @@ public class ReservationService {
 
     }
 
+    public List<ReservationDTO> getUserReservations(Long userId) {
+        List<Reservation> reservations = reservationRepository.findAllByUserId(userId);
+        return reservations.stream()
+                .map(this::convert)
+                .toList();
+    }
+
+
     public List<ReservationDTO> getAllApprovedReservations() {
         List<Reservation> reservations = reservationRepository.findByStatus(ReservationStatus.APPROVED);
         return reservations.stream()

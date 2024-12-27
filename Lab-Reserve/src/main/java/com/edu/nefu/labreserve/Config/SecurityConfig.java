@@ -19,7 +19,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfigurationSource;
 
 
 @Configuration
@@ -27,27 +26,19 @@ import org.springframework.web.cors.CorsConfigurationSource;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final UserDetailsService userDetailsService;
-    private final CorsConfigurationSource corsConfigurationSource;
 
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(corsConfigurationSource)) // 应用 CORS 配置
-
-                .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/api/login").permitAll()
-                        // 放行 Swagger UI 的静态资源和接口
-                        .requestMatchers(
-                                "/swagger-ui/**",   // Swagger UI 静态资源
-                                "/v3/api-docs/**"   // OpenAPI 规范文档 JSON 文件
-                        ).permitAll()
-                        .anyRequest().authenticated()
-                )
-                .addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                );
+        http.csrf(csrf -> csrf.disable());
+//            .authorizeHttpRequests((authorize) -> authorize
+//                    .requestMatchers("/api/login").permitAll()
+//                    .anyRequest().authenticated()
+//            )
+//            .addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+//            .sessionManagement(session -> session
+//                    .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//            );
 
         return http.build();
     }

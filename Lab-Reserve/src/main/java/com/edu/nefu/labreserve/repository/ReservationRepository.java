@@ -26,4 +26,7 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
                               @Param("periodId") Integer periodId);
 
 
+    // 根据用户ID查询预约记录
+    @Query("SELECT r FROM Reservation r WHERE r.course.teacher.id = :userId")
+    List<Reservation> findAllByUserId(Long userId);
 }

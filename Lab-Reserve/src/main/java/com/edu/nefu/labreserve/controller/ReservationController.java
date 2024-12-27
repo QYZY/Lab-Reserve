@@ -54,5 +54,12 @@ public class ReservationController {
         return ResponseEntity.ok(reservations);
     }
 
+    // 获取某个用户的所有预约
+    @GetMapping("/user/{userId}")
+    public List<ReservationDTO> getUserReservations(@PathVariable Long userId) {
+        return reservationService.getUserReservations(userId);
+    }
+
+
 
 }

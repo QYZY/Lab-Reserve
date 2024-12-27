@@ -1,12 +1,14 @@
 package com.edu.nefu.labreserve.repository;
 
 import com.edu.nefu.labreserve.dox.Lab;
+import com.edu.nefu.labreserve.dto.LabDTO;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,4 +25,5 @@ public interface LabRepository extends JpaRepository<Lab, Long> {
                                 @Param("weekDay") Integer weekDay,
                                 @Param("periodId") Long periodId);
 
+    List<Lab> findByAdminId(Long adminId);
 }
