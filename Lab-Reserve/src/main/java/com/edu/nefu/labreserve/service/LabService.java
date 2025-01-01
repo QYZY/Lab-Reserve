@@ -83,6 +83,7 @@ public class LabService {
                 .name(lab.getName())
                 .description(lab.getDescription())
                 .adminId(lab.getAdmin().getId())
+                .adminName(lab.getAdmin().getUsername())
                 .build();
     }
 

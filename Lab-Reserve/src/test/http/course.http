@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwM
 }
 
 ### Delete course
-DELETE localhost:8080/api/course/1
+DELETE localhost:8080/api/course/11
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDcwMjc1NSwiZXhwIjoxNzM0NzA2MzU1fQ.A4AlyqmbVc88VsB_Uk0ykwhqY3shbkzry9diQKYjESE
 
 

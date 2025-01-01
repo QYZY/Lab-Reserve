@@ -19,7 +19,8 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
             "WHERE r.lab.id = :labId " +
             "AND r.weekNumber = :weekNumber " +
             "AND r.weekDay = :weekDay " +
-            "AND r.period.id = :periodId")
+            "AND r.period.id = :periodId " +
+            "AND r.status IN ('PENDING', 'APPROVED')")
     boolean isPeriodAvailable(@Param("labId") Long labId,
                               @Param("weekNumber") Integer weekNumber,
                               @Param("weekDay") Integer weekDay,
@@ -29,4 +30,9 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     // 根据用户ID查询预约记录
     @Query("SELECT r FROM Reservation r WHERE r.course.teacher.id = :userId")
     List<Reservation> findAllByUserId(Long userId);
+
+    // 根据管理员ID查询预约记录
+    @Query("SELECT r FROM Reservation r WHERE r.lab.admin.id = :adminId AND r.status = 'PENDING'")
+    List<Reservation> findAllByAdminId(Long adminId);
+
 }

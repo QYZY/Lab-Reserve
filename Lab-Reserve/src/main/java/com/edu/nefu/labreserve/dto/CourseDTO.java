@@ -17,5 +17,4 @@ public class CourseDTO {
     private Integer studyHour;
     private String className;
     private Long teacherId;
-
 }

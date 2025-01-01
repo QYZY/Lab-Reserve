@@ -22,9 +22,9 @@ public class ReservationController {
         return ResponseEntity.ok("添加成功");
     }
 
-    @DeleteMapping("{id}")
+    @PatchMapping("/{id}/cancel")
     public ResponseEntity<String> cancelReservation(@PathVariable Long id) {
-        reservationService.cancelReservation(id);
+        reservationService.updateReservationStatus(id,ReservationStatus.CANCELED);
         return ResponseEntity.ok("取消成功");
     }
 
@@ -58,6 +58,12 @@ public class ReservationController {
     @GetMapping("/user/{userId}")
     public List<ReservationDTO> getUserReservations(@PathVariable Long userId) {
         return reservationService.getUserReservations(userId);
+    }
+
+    @GetMapping("/admin/{adminId}")
+    public ResponseEntity<List<ReservationDTO>> getReservationsByAdmin(@PathVariable Long adminId) {
+        List<ReservationDTO> reservations = reservationService.getReservationsByAdminId(adminId);
+        return ResponseEntity.ok(reservations);
     }
 
 

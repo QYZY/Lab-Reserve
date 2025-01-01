@@ -1,0 +1,5 @@
+###
+GET localhost:8080/api/user/list
+
+###
+GET localhost:8080/api/user/teachers

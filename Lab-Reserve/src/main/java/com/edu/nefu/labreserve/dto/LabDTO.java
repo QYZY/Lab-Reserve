@@ -14,4 +14,5 @@ public class LabDTO {
     private String name;
     private String description; // 实验室描述
     private Long adminId;
+    private String adminName;
 }

@@ -20,7 +20,7 @@ public interface LabRepository extends JpaRepository<Lab, Long> {
     @Query("SELECT l FROM Lab l WHERE l.id NOT IN (" +
             "SELECT r.lab.id FROM Reservation r " +
             "WHERE r.weekNumber = :weekNumber AND r.weekDay = :weekDay AND r.period.id = :periodId " +
-            "AND r.status = 'APPROVED')")
+            "AND r.status IN ('APPENDING', 'PENDING'))")
     List<Lab> findAvailableLabs(@Param("weekNumber") Integer weekNumber,
                                 @Param("weekDay") Integer weekDay,
                                 @Param("periodId") Long periodId);

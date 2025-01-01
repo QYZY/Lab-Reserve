@@ -16,8 +16,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczM
 
  {
     "userId": 1,
-    "courseId": 12,
-    "labId": 1,
+    "courseId": 13,
+    "labId": 19,
     "periodId": 3,
     "weekNumber": 2,
     "weekDay": 1
@@ -25,11 +25,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczM
 
 
 ###
-DELETE localhost:8080/api/reservation/7
+PATCH localhost:8080/api/reservation/34/cancel
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
 
 ###
-PATCH localhost:8080/api/reservation/1/approve
+PATCH localhost:8080/api/reservation/34/approve
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
 
 ###
+
+PATCH localhost:8080/api/reservation/2/reject
+
+###
+
+GET localhost:8080/api/reservation/admin/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
