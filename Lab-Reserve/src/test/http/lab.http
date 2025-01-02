@@ -33,3 +33,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczN
 DELETE localhost:8080/api/lab/4
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
 
+

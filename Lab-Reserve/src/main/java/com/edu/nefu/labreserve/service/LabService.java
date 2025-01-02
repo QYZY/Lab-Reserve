@@ -70,12 +70,20 @@ public class LabService {
                 .collect(Collectors.toList());
     }
 
+    public List<LabDTO> getLabsByAdminId(Long adminId) {
+        return labRepository.findByAdminId(adminId)
+                .stream()
+                .map(this::convert)
+                .collect(Collectors.toList());
+    }
+
     public LabDTO convert(Lab lab) {
         return LabDTO.builder()
                 .id(lab.getId())
                 .name(lab.getName())
                 .description(lab.getDescription())
                 .adminId(lab.getAdmin().getId())
+                .adminName(lab.getAdmin().getUsername())
                 .build();
     }
 

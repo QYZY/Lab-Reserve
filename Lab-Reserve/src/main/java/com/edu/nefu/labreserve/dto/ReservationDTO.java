@@ -17,4 +17,5 @@ public class ReservationDTO {
     private Integer periodId;
     private Integer weekNumber;
     private Integer weekDay;
+    private String status;
 }

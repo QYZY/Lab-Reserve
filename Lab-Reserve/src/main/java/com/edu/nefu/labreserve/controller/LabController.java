@@ -88,4 +88,9 @@ public class LabController {
                                          @RequestParam Long periodId) {
         return labService.getAvailableLabs(weekNumber, weekDay, periodId);
     }
+
+    @GetMapping("/admin/{adminId}")
+    public List<LabDTO> getLabsByAdminId(@PathVariable Long adminId) {
+        return labService.getLabsByAdminId(adminId);
+    }
 }

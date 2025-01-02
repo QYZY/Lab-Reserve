@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Table(
-        name = "reservation",
-        uniqueConstraints = @UniqueConstraint(columnNames = {"labId","weekNumber","weekDay","periodId"})
+        name = "reservation"
 )
 
 public class Reservation {
@@ -25,11 +24,11 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // 预约ID
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "course_id", nullable = false)
     private Course course; // 预约的课程
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "lab_id", nullable = false)
     private Lab lab; // 预约的实验室
 

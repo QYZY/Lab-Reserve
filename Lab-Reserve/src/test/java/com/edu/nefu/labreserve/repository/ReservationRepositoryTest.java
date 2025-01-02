@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
@@ -40,6 +41,15 @@ class ReservationRepositoryTest {
         reservationRepository.save(reservation);
 
 
+    }
+
+    @Test
+    public void testFindAllByAdminId() {
+        Optional<User> user = userRepository.findById(1L);
+        List<Reservation> reservations = reservationRepository.findAllByAdminId(user.get().getId());
+        for (Reservation reservation : reservations) {
+            System.out.println(reservation);
+        }
     }
 
     @Test

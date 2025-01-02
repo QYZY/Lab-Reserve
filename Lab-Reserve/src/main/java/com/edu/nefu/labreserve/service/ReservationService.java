@@ -72,6 +72,13 @@ public class ReservationService {
         return true;
     }
 
+    public List<ReservationDTO> getReservationsByAdminId(Long adminId) {
+        List<Reservation> reservations = reservationRepository.findAllByAdminId(adminId);
+        return reservations.stream()
+                .map(this::convert)
+                .toList();
+    }
+
     public List<ReservationDTO> getAllReservations() {
         List<Reservation> reservations = reservationRepository.findAll();
         return reservations.stream()
@@ -79,6 +86,14 @@ public class ReservationService {
                 .toList();
 
     }
+
+    public List<ReservationDTO> getUserReservations(Long userId) {
+        List<Reservation> reservations = reservationRepository.findAllByUserId(userId);
+        return reservations.stream()
+                .map(this::convert)
+                .toList();
+    }
+
 
     public List<ReservationDTO> getAllApprovedReservations() {
         List<Reservation> reservations = reservationRepository.findByStatus(ReservationStatus.APPROVED);
@@ -97,6 +112,7 @@ public class ReservationService {
                 .periodId(reservation.getPeriod().getId())
                 .weekNumber(reservation.getWeekNumber())
                 .weekDay(reservation.getWeekDay())
+                .status(reservation.getStatus().name())
                 .build();
     }
 }
