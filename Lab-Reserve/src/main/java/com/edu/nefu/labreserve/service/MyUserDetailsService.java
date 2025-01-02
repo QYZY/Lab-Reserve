@@ -22,7 +22,7 @@ public class MyUserDetailsService implements UserDetailsService {
         return org.springframework.security.core.userdetails.User.builder()
                 .username(user.getUsername())
                 .password(user.getPassword()) // 数据库中加密后的密码
-                .roles(String.valueOf(user.getRole())) // 用户角色
+                .roles(user.getRole().name()) // 确保角色被正确加载
                 .build();
     }
 }

@@ -4,14 +4,17 @@ import com.edu.nefu.labreserve.dto.CourseDTO;
 import com.edu.nefu.labreserve.repository.CourseRepository;
 import com.edu.nefu.labreserve.service.CourseService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/course/")
 @RequiredArgsConstructor
@@ -28,6 +31,9 @@ public class CourseController {
     @PostMapping("add")
     @Operation(summary = "添加课程", description = "添加一门新的课程")
     public ResponseEntity<String> addCourse(@RequestBody CourseDTO courseDTO) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        log.info(authentication.getName());
+        log.info(authentication.getAuthorities().toString());
         courseService.addCourse(courseDTO);
         return ResponseEntity.ok().body("添加成功");
     }
@@ -41,6 +47,9 @@ public class CourseController {
     @PutMapping("{id}")
     @Operation(summary = "更新课程", description = "根据课程ID更新课程信息")
     public ResponseEntity<String> updateCourse(@PathVariable("id") Long id, @RequestBody CourseDTO courseDTO) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        log.info(authentication.getName());
+        log.info(authentication.getAuthorities().toString());
         if (!courseRepository.existsById(id)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("课程不存在");
         }

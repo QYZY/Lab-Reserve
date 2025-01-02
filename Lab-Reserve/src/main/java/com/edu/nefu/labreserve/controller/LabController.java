@@ -89,6 +89,7 @@ public class LabController {
         return labService.getAvailableLabs(weekNumber, weekDay, periodId);
     }
 
+    // 获取指定管理员管理的实验室
     @GetMapping("/admin/{adminId}")
     public List<LabDTO> getLabsByAdminId(@PathVariable Long adminId) {
         return labService.getLabsByAdminId(adminId);

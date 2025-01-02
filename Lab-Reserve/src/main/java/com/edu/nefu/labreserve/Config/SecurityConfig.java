@@ -37,12 +37,13 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/api/login").permitAll()
-                        // 放行 Swagger UI 的静态资源和接口
-                        .requestMatchers(
-                                "/swagger-ui/**",   // Swagger UI 静态资源
-                                "/v3/api-docs/**"   // OpenAPI 规范文档 JSON 文件
-                        ).permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/api/course/add", "/api/course/{id}").hasAnyRole("SUPER_ADMIN","TEACHER") // 仅超级管理员可以添加或更新课程
+                        .requestMatchers("/api/lab/available").hasAnyRole("TEACHER") // 仅超级管理员可以添加或更新课程
+
+//                        .requestMatchers("/api/lab/add", "/api/lab/{id}").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅超级管理员可以添加或更新课程
+                        .requestMatchers("/api/reservation/add").hasAnyRole("TEACHER") // 仅教师可以发起预约
+//                        .requestMatchers("/api/reservation/{id}/**").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅教师可以发起预约
+                        .anyRequest().authenticated() // 其他请求需要登录
                 )
                 .addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement(session -> session

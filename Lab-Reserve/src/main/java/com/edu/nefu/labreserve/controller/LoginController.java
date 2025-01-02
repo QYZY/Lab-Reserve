@@ -39,9 +39,11 @@ public class LoginController {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         Optional<User> user = userRepository.findByUsername(username);
+        // 获取用户的角色
+        String role = user.get().getRole().toString();
         if (user.isPresent()) {
             // 生成jwt
-            String token = jwtUtil.generateToken(username);
+            String token = jwtUtil.generateToken(username,role);
             // 设置到响应头中
             response.addHeader("Authorization", "Bearer " + token);
             Map<String, Object> map = new HashMap<>();

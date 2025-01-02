@@ -16,7 +16,7 @@ import java.util.List;
 public class ReservationController {
     private final ReservationService reservationService;
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public ResponseEntity<String> addReservation(@RequestBody ReservationDTO reservationDTO) {
         reservationService.addReservation(reservationDTO);
         return ResponseEntity.ok("添加成功");
@@ -41,13 +41,13 @@ public class ReservationController {
     }
 
 
-    @GetMapping("list")
+    @GetMapping("/list")
     public ResponseEntity<List<ReservationDTO>> listReservation() {
         List<ReservationDTO> reservations = reservationService.getAllReservations();
         return ResponseEntity.ok(reservations);
     }
 
-    @GetMapping("list/approve")
+    @GetMapping("/list/approve")
 
     public ResponseEntity<List<ReservationDTO>> listApproveReservation() {
         List<ReservationDTO> reservations = reservationService.getAllReservations();
@@ -60,6 +60,7 @@ public class ReservationController {
         return reservationService.getUserReservations(userId);
     }
 
+    // 获取某个管理员管理的所有预约
     @GetMapping("/admin/{adminId}")
     public ResponseEntity<List<ReservationDTO>> getReservationsByAdmin(@PathVariable Long adminId) {
         List<ReservationDTO> reservations = reservationService.getReservationsByAdminId(adminId);
