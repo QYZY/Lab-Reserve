@@ -4,56 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="ADD: reservation">
-      <change afterPath="$PROJECT_DIR$/.idea/Lab-Reserve.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/lab.jaEBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151815.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151823.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151825.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151857.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T152007.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T174048.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230557.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230607.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230609.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230614.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230619.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230637.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230721.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230825.400.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230847.400.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230902.400.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230932.400.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T231037.200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T231044.500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T234400.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/repository/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/lab.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/lab.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/java/com/edu/nefu/labreserve/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/java/com/edu/nefu/labreserve/service/UserServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="ADD: reservation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +133,7 @@
       <workItem from="1735142573110" duration="11839000" />
       <workItem from="1735668461101" duration="4827000" />
       <workItem from="1735709846700" duration="14425000" />
-      <workItem from="1735811213609" duration="21001000" />
+      <workItem from="1735811213609" duration="21951000" />
     </task>
     <task id="LOCAL-00001" summary="ADD: reservation">
       <option name="closed" value="true" />
@@ -200,24 +151,52 @@
       <option name="project" value="LOCAL" />
       <updated>1735752174539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ADD: reservation">
+      <option name="closed" value="true" />
+      <created>1735873729482</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735873729482</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
