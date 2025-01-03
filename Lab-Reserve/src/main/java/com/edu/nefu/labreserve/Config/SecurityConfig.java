@@ -42,6 +42,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/lab/add", "/api/lab/{id}").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅超级管理员可以添加或更新课程
                         .requestMatchers("/api/reservation/add","/api/reservation/week").hasRole("TEACHER") // 仅教师可以发起预约
                         .requestMatchers("/api/reservation/{id}/**").hasAnyRole("SUPER_ADMIN","LAB_ADMIN","TEACHER") // 仅管理员可以审核预约
+                        .requestMatchers("/api/user/**").hasRole("SUPER_ADMIN") // 仅超级管理员可以管理用户
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Swagger 相关请求无需登录
                         .anyRequest().authenticated() // 其他请求需要登录
                 )

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="ADD: reservation" />
+    <list default="true" id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="v1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +136,7 @@
       <workItem from="1735142573110" duration="11839000" />
       <workItem from="1735668461101" duration="4827000" />
       <workItem from="1735709846700" duration="14425000" />
-      <workItem from="1735811213609" duration="21951000" />
+      <workItem from="1735811213609" duration="23959000" />
     </task>
     <task id="LOCAL-00001" summary="ADD: reservation">
       <option name="closed" value="true" />
@@ -159,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735873729482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v1.0">
+      <option name="closed" value="true" />
+      <created>1735873968003</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735873968003</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +221,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADD: reservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: reservation" />
+    <MESSAGE value="v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
