@@ -35,4 +35,9 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     @Query("SELECT r FROM Reservation r WHERE r.lab.admin.id = :adminId AND r.status = 'PENDING'")
     List<Reservation> findAllByAdminId(Long adminId);
 
-}
+
+
+    List<Reservation> findByLabIdAndWeekNumberAndStatusIn(Long labId, Integer weekNumber, List<ReservationStatus> approved);
+
+    @Query("SELECT r FROM Reservation r WHERE (r.course.teacher.id = :userId) AND r.status IN ('PENDING', 'APPROVED')")
+    List<Reservation> findByUserIdAndStatus(Long userId);}

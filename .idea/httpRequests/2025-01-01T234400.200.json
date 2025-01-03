@@ -1,0 +1,82 @@
+[
+  {
+    "id": 34,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 8,
+    "periodId": 1,
+    "weekNumber": 1,
+    "weekDay": 1,
+    "status": "CANCELED"
+  },
+  {
+    "id": 35,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 14,
+    "periodId": 1,
+    "weekNumber": 1,
+    "weekDay": 1,
+    "status": "PENDING"
+  },
+  {
+    "id": 36,
+    "userId": 4,
+    "courseId": 13,
+    "labId": 19,
+    "periodId": 3,
+    "weekNumber": 2,
+    "weekDay": 1,
+    "status": "PENDING"
+  },
+  {
+    "id": 37,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 8,
+    "periodId": 1,
+    "weekNumber": 2,
+    "weekDay": 1,
+    "status": "PENDING"
+  },
+  {
+    "id": 38,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 18,
+    "periodId": 1,
+    "weekNumber": 1,
+    "weekDay": 1,
+    "status": "PENDING"
+  },
+  {
+    "id": 39,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 8,
+    "periodId": 2,
+    "weekNumber": 2,
+    "weekDay": 2,
+    "status": "PENDING"
+  },
+  {
+    "id": 40,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 14,
+    "periodId": 2,
+    "weekNumber": 2,
+    "weekDay": 2,
+    "status": "PENDING"
+  },
+  {
+    "id": 41,
+    "userId": 1,
+    "courseId": 23,
+    "labId": 15,
+    "periodId": 2,
+    "weekNumber": 2,
+    "weekDay": 2,
+    "status": "PENDING"
+  }
+]

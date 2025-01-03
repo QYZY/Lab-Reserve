@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "web开发",
+    "stuNumber": 15,
+    "studyHour": 8,
+    "className": "软件工程 2022-4",
+    "teacherId": 1
+  },
+  {
+    "id": 2,
+    "name": "数据库原理",
+    "stuNumber": 20,
+    "studyHour": 10,
+    "className": "计算机科学与技术 2022-1",
+    "teacherId": 1
+  },
+  {
+    "id": 3,
+    "name": "软件工程",
+    "stuNumber": 40,
+    "studyHour": 3,
+    "className": "数据科学与大数据 2023-1",
+    "teacherId": 3
+  },
+  {
+    "id": 4,
+    "name": "数据结构",
+    "stuNumber": 20,
+    "studyHour": 10,
+    "className": "软件工程 2022-4",
+    "teacherId": 2
+  },
+  {
+    "id": 5,
+    "name": "内网渗透",
+    "stuNumber": 10,
+    "studyHour": 5,
+    "className": "计算机科学与技术 2022-01",
+    "teacherId": 3
+  },
+  {
+    "id": 8,
+    "name": "取证分析",
+    "stuNumber": 10,
+    "studyHour": 5,
+    "className": "计算机科学与技术 2022-01",
+    "teacherId": 2
+  },
+  {
+    "id": 11,
+    "name": "Linux与shell编程",
+    "stuNumber": 20,
+    "studyHour": 8,
+    "className": "计算机科学与技术 2022-1",
+    "teacherId": 2
+  },
+  {
+    "id": 12,
+    "name": "操作系统原理",
+    "stuNumber": 15,
+    "studyHour": 6,
+    "className": "软件工程 2022-1",
+    "teacherId": 1
+  },
+  {
+    "id": 13,
+    "name": "神奇的蘑菇",
+    "stuNumber": 20,
+    "studyHour": 2,
+    "className": "计算机科学与技术",
+    "teacherId": 2
+  }
+]

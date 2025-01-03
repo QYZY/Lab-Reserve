@@ -32,7 +32,7 @@ class UserServiceTest {
 
     @Test
     void testDelUser() {
-        userService.delUser("qyzy1");
+        userService.delUser(1L);
     }
 
 
@@ -65,12 +65,12 @@ class UserServiceTest {
 
     @Test
     void testResetPassword() {
-        userService.resetPassword("miguo", "mima1234");
+        userService.resetPassword(1L, "mima1234");
     }
 
     @Test
     void testUpdateRole() {
-        userService.updateRole("qyzy", UserRole.SUPER_ADMIN);
+        userService.updateUser(1L,"qyzy", UserRole.SUPER_ADMIN);
     }
 
     @Test

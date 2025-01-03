@@ -5,8 +5,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczM
 
 ###
 
-GET localhost:8080/api/reservation/user/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNTMwMjk1MCwiZXhwIjoxNzM1MzA2NTUwfQ.7czGYFLDqvO_l7yWPavdA-Q5BFYp2osi1wI1nofi-68
+GET localhost:8080/api/reservation/user/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZSI6IlNVUEVSX0FETUlOIiwiaWF0IjoxNzM1ODQ5ODY0LCJleHAiOjE3MzU4NTM0NjR9.1m1GyV1pxZIsgnZXhyrwpNaV7KIRadeDbqqr4h_kABo
 
 
 ###
@@ -26,7 +26,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczM
 
 ###
 PATCH localhost:8080/api/reservation/34/cancel
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJURUFDSEVSIiwiaWF0IjoxNzM1ODY4ODIyLCJleHAiOjE3MzU4NzI0MjJ9.c_y9a2MibXn4ZBbpAQTt5k6MkY5xIMwec-KYNfjdN_g
 
 ###
 PATCH localhost:8080/api/reservation/34/approve
@@ -40,3 +40,7 @@ PATCH localhost:8080/api/reservation/2/reject
 
 GET localhost:8080/api/reservation/admin/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTczNDczNDk3NCwiZXhwIjoxNzM0NzM4NTc0fQ.yk-m1nSZ2MhBQMKfYOJgc9vvGvuKxu94WBUCvbriTp4
+
+###
+GET localhost:8080/api/reservation/week?labId=8&weekNumber=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJURUFDSEVSIiwiaWF0IjoxNzM1ODI0MzMwLCJleHAiOjE3MzU4Mjc5MzB9.wGincr3R8GoyQgJel3KxGUVbAPhCr-L9HjpiffFAj3g

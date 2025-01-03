@@ -67,6 +67,13 @@ public class ReservationController {
         return ResponseEntity.ok(reservations);
     }
 
+    // 获取指定实验室和指定周数的所有预约信息
+    @GetMapping("/week")
+    public ResponseEntity<List<ReservationDTO>> getReservationsByWeek(@RequestParam Long labId, @RequestParam Integer weekNumber) {
+        List<ReservationDTO> reservations = reservationService.getReservationsByLabAndWeek(labId, weekNumber);
+        return ResponseEntity.ok(reservations);
+    }
+
 
 
 }

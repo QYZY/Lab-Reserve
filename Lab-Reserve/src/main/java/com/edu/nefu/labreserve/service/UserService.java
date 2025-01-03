@@ -4,9 +4,7 @@ import com.edu.nefu.labreserve.dox.User;
 import com.edu.nefu.labreserve.dox.UserRole;
 import com.edu.nefu.labreserve.exception.XException;
 import com.edu.nefu.labreserve.repository.UserRepository;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -46,10 +44,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public void delUser(String username) {
+    public void delUser(Long id) {
         // 检查用户是否存在
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new XException("User not found"));
+        User user = userRepository.findById(id).orElseThrow(() -> new XException("User not found"));
 
         // 删除用户
         userRepository.delete(user);
@@ -71,10 +68,9 @@ public class UserService {
     }
 
     // 重置密码
-    public User resetPassword(String username, String newPassword) {
+    public User resetPassword(Long id, String newPassword) {
         // 查找用户
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new XException("User not found"));
+        User user = userRepository.findById(id).orElseThrow(() -> new XException("User not found"));
         // 加密新密码
         String encryptedPassword = passwordEncoder.encode(newPassword);
         // 更新用户密码
@@ -85,8 +81,7 @@ public class UserService {
     // 修改密码
     public User changePassword(String username, String oldPassword, String newPassword) {
         // 查找用户
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new XException("User not found"));
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new XException("User not found"));
         // 验证旧密码是否正确
         if (!passwordEncoder.matches(oldPassword, user.getPassword())) {
             throw new XException("Old password is incorrect");
@@ -99,11 +94,11 @@ public class UserService {
     }
 
     // 更新角色
-    public User updateRole(String username, UserRole newRole) {
+    public User updateUser(Long id, String username, UserRole newRole) {
         // 查找用户
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new XException("User not found"));
+        User user = userRepository.findById(id).orElseThrow(() -> new XException("User not found"));
         // 更新角色
+        user.setUsername(username);
         user.setRole(newRole);
         return userRepository.save(user);
     }
@@ -112,4 +107,6 @@ public class UserService {
     public String getUsernameById(Long userId) {
         return userRepository.findUsernameById(userId);
     }
+
+
 }

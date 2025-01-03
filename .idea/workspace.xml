@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="ADD: reservation">
+      <change afterPath="$PROJECT_DIR$/.idea/Lab-Reserve.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/lab.jaEBAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/28012ddc-bde1-48c3-b779-759a1a5aa59e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151815.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151823.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151825.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T151857.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T152007.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T174048.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230557.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230607.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230609.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230614.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230619.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230637.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230721.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230825.400.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230847.400.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230902.400.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T230932.400.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T231037.200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T231044.500.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2025-01-01T234400.200.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/main/java/com/edu/nefu/labreserve/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/lab.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/lab.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab-Reserve/src/test/java/com/edu/nefu/labreserve/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab-Reserve/src/test/java/com/edu/nefu/labreserve/service/UserServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\Maven\apache-maven-3.9.4-bin\apache-maven-3.9.4" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.9.4-bin\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2qiDQAIPciboicZywffeCkCMsxt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "HTTP 请求.course | Add course.executor": "Run",
+    "HTTP 请求.course | All course.executor": "Run",
+    "HTTP 请求.course | Delete course.executor": "Run",
+    "HTTP 请求.course | Teacher course.executor": "Run",
+    "HTTP 请求.course | Update course.executor": "Run",
+    "HTTP 请求.lab | GET Available Lab.executor": "Run",
+    "HTTP 请求.lab | GET Labs.executor": "Run",
+    "HTTP 请求.login | GET request to example server.executor": "Run",
+    "HTTP 请求.reservation | #1.executor": "Run",
+    "HTTP 请求.reservation | #2.executor": "Run",
+    "HTTP 请求.reservation | #3.executor": "Run",
+    "HTTP 请求.reservation | #4.executor": "Run",
+    "HTTP 请求.reservation | #5.executor": "Run",
+    "HTTP 请求.reservation | #6.executor": "Run",
+    "HTTP 请求.reservation | #7.executor": "Run",
+    "HTTP 请求.reservation | #8.executor": "Run",
+    "HTTP 请求.user | #1.executor": "Run",
+    "HTTP 请求.user | #2.executor": "Run",
+    "HTTP 请求.user | #3.executor": "Run",
+    "JUnit.CourseServiceTest.testAddCourse.executor": "Run",
+    "JUnit.ReservationRepositoryTest.testFindAllByAdminId.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LabReserveApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/javaproject/Lab-Reserve",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.LabReserveApplication">
+    <configuration name="reservation | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" index="2" requestIdentifier="#2" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="reservation | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" index="4" requestIdentifier="#4" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="reservation | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Lab-Reserve/src/test/http/reservation.http" index="8" requestIdentifier="#8" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="user | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" requestIdentifier="#1" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="user | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Lab-Reserve/src/test/http/user.http" index="3" requestIdentifier="#3" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="LabReserveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Lab-Reserve" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.edu.nefu.labreserve.LabReserveApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP 请求.reservation | #4" />
+        <item itemvalue="HTTP 请求.user | #3" />
+        <item itemvalue="HTTP 请求.reservation | #2" />
+        <item itemvalue="HTTP 请求.user | #1" />
+        <item itemvalue="HTTP 请求.reservation | #8" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="222c18e5-fbd4-4038-9b69-a03561e43cec" name="更改" comment="" />
+      <created>1735136483750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735136483750</updated>
+      <workItem from="1735136488080" duration="1579000" />
+      <workItem from="1735142573110" duration="11839000" />
+      <workItem from="1735668461101" duration="4827000" />
+      <workItem from="1735709846700" duration="14425000" />
+      <workItem from="1735811213609" duration="21001000" />
+    </task>
+    <task id="LOCAL-00001" summary="ADD: reservation">
+      <option name="closed" value="true" />
+      <created>1735308007446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735308007446</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ADD: reservation">
+      <option name="closed" value="true" />
+      <created>1735752174539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735752174539</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ADD: reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: reservation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Lab-Reserve/src/test/java/com/edu/nefu/labreserve/service/CourseServiceTest.java</url>
+          <line>27</line>
+          <properties class="com.edu.nefu.labreserve.service.CourseServiceTest" method="testAddCourse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 15,
+    "userId": 4,
+    "courseId": 12,
+    "labId": 3,
+    "periodId": 2,
+    "weekNumber": 3,
+    "weekDay": 2,
+    "status": "PENDING"
+  },
+  {
+    "id": 16,
+    "userId": 1,
+    "courseId": 1,
+    "labId": 1,
+    "periodId": 1,
+    "weekNumber": 1,
+    "weekDay": 1,
+    "status": "PENDING"
+  }
+]

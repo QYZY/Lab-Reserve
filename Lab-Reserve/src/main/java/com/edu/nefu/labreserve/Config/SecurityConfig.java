@@ -37,12 +37,12 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers("/api/login").permitAll()
+                        .requestMatchers("/api/lab/list","/api/course/list","/api/user/list").authenticated() // 所有人都可以查看课程列表
                         .requestMatchers("/api/course/add", "/api/course/{id}").hasAnyRole("SUPER_ADMIN","TEACHER") // 仅超级管理员可以添加或更新课程
-                        .requestMatchers("/api/lab/available").hasAnyRole("TEACHER") // 仅超级管理员可以添加或更新课程
-
-//                        .requestMatchers("/api/lab/add", "/api/lab/{id}").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅超级管理员可以添加或更新课程
-                        .requestMatchers("/api/reservation/add").hasAnyRole("TEACHER") // 仅教师可以发起预约
-//                        .requestMatchers("/api/reservation/{id}/**").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅教师可以发起预约
+                        .requestMatchers("/api/lab/add", "/api/lab/{id}").hasAnyRole("SUPER_ADMIN","LAB_ADMIN") // 仅超级管理员可以添加或更新课程
+                        .requestMatchers("/api/reservation/add","/api/reservation/week").hasRole("TEACHER") // 仅教师可以发起预约
+                        .requestMatchers("/api/reservation/{id}/**").hasAnyRole("SUPER_ADMIN","LAB_ADMIN","TEACHER") // 仅管理员可以审核预约
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Swagger 相关请求无需登录
                         .anyRequest().authenticated() // 其他请求需要登录
                 )
                 .addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)

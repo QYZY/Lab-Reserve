@@ -88,7 +88,8 @@ public class ReservationService {
     }
 
     public List<ReservationDTO> getUserReservations(Long userId) {
-        List<Reservation> reservations = reservationRepository.findAllByUserId(userId);
+        List<Reservation> reservations = reservationRepository.findByUserIdAndStatus(userId);
+
         return reservations.stream()
                 .map(this::convert)
                 .toList();
@@ -114,5 +115,13 @@ public class ReservationService {
                 .weekDay(reservation.getWeekDay())
                 .status(reservation.getStatus().name())
                 .build();
+    }
+
+    public List<ReservationDTO> getReservationsByLabAndWeek(Long labId, Integer weekNumber) {
+        List<Reservation> reservations = reservationRepository.findByLabIdAndWeekNumberAndStatusIn(
+                labId, weekNumber, List.of(ReservationStatus.APPROVED, ReservationStatus.PENDING));
+        return reservations.stream()
+                .map(this::convert)
+                .toList();
     }
 }

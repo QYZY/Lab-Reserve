@@ -6,10 +6,7 @@ import com.edu.nefu.labreserve.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,4 +40,35 @@ public class UserController {
         return ResponseEntity.ok(teachers);
     }
 
+    @PostMapping("/add")
+    public ResponseEntity<User> addUser(
+            @RequestParam String username,
+            @RequestParam String password,
+            @RequestParam UserRole role) {
+        User user = userService.addUser(username, password, role);
+        return ResponseEntity.ok(user);
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<User> updateUser(
+            @RequestParam Long userId,
+            @RequestParam String username,
+            @RequestParam UserRole role) {
+        User user = userService.updateUser(userId, username, role);
+        return ResponseEntity.ok(user);
+    }
+
+    @DeleteMapping("/delete/{userId}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long userId) {
+        userService.delUser(userId);
+        return ResponseEntity.ok("删除成功");
+    }
+
+    @PostMapping("/reset")
+    public ResponseEntity<String> resetPassword(
+            @RequestParam Long userId,
+            @RequestParam String newPassword) {
+        userService.resetPassword(userId, newPassword);
+        return ResponseEntity.ok("重置密码成功");
+    }
 }

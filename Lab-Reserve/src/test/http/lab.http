@@ -1,6 +1,6 @@
 ### GET Labs
 GET localhost:8080/api/lab/list
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJxeXp5Iiwicm9sZSI6IkxBQl9BRE1JTiIsImlhdCI6MTczNTgwNjQ4MiwiZXhwIjoxNzM1ODEwMDgyfQ.R4rGK71FctVwy9OXqpJPyXskkaaNlT1iZrqIwH-LR2U
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJURUFDSEVSIiwiaWF0IjoxNzM1ODE3MjA2LCJleHAiOjE3MzU4MjA4MDZ9.eAaAbwmfqmFI7fwA44uw88-b1kWdsZzhlnqA92MZ6rQ
 
 ### GET Available Lab
 GET localhost:8080/api/lab/available?weekNumber=1&weekDay=1&periodId=1

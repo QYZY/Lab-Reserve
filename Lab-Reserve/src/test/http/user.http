@@ -3,3 +3,10 @@ GET localhost:8080/api/user/list
 
 ###
 GET localhost:8080/api/user/teachers
+
+###
+POST localhost:8080/api/user/add
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0Iiwicm9sZSI6IlNVUEVSX0FETUlOIiwiaWF0IjoxNzM1ODQ5ODY0LCJleHAiOjE3MzU4NTM0NjR9.1m1GyV1pxZIsgnZXhyrwpNaV7KIRadeDbqqr4h_kABo
+
+username=test11&password=test11&role=TEACHER
